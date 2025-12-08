@@ -1,6 +1,4 @@
-from .utils import log
-from .config import PROJECT_NAME
-
-def run():
-    log(f"Starting {PROJECT_NAME}...")
-    print("Hello from your Text Analysis Generator")
+def main():
+    print("Välkommen till Relations Simulator!")
+    name = input("Vad heter du? ")
+    print(f"Hej {name}! Spelet är under utveckling, men du är igång!")
