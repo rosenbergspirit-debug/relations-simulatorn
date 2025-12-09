@@ -1,15 +1,16 @@
 from pathlib import Path
 
-# Projektets root-mapp (src/my_project/..)
-ROOT_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
+SCENARIO_FILE = BASE_DIR / "scenarios.json"
 
-# Datamappar
-DATA_DIR = ROOT_DIR / "data"
-OUTPUT_DIR = ROOT_DIR / "output"
+DEFAULT_STATE = {
+    "trust": 70,
+    "stress": 20,
+    "weeds": 10,
+    "misinterpretation": 20,
+    "repair_points": 0
+}
 
-# Skapa mappar om de inte finns
-DATA_DIR.mkdir(exist_ok=True)
-OUTPUT_DIR.mkdir(exist_ok=True)
-
-# Globala variabler
-PROJECT_NAME = "Text Analysis Generator"
+MAX_REPAIR_POINTS = 3
+MIN_VALUE = 0
+MAX_VALUE = 100
