@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "text": "Din partner är stressad och du kommer hem sent.",
+    "choices": {
+      "a": {
+        "label": "Du försvarar dig aggressivt",
+        "effects": { "trust": -10, "stress": 5, "weeds": 10 }
+      },
+      "b": {
+        "label": "Du ignorerar situationen",
+        "effects": { "trust": -5, "weeds": 5 }
+      },
+      "c": {
+        "label": "Du lyssnar och bekräftar",
+        "effects": { "trust": 5, "stress": -5 }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "text": "Din partner kritiserar hur du hanterar ekonomin.",
+    "choices": {
+      "a": {
+        "label": "Du går till motattack",
+        "effects": { "trust": -8, "weeds": 8 }
+      },
+      "b": {
+        "label": "Du stänger av känslomässigt",
+        "effects": { "stress": 5, "weeds": 5 }
+      },
+      "c": {
+        "label": "Du försöker förstå kritiken",
+        "effects": { "trust": 6 }
+      }
+    }
+  },
+  {
+    "id": 3,
+    "text": "Ni missförstår varandra i ett känsligt ämne.",
+    "choices": {
+      "a": {
+        "label": "Du dömer partnern",
+        "effects": { "trust": -12, "weeds": 12 }
+      },
+      "b": {
+        "label": "Du backar och reflekterar",
+        "effects": { "misinterpretation": -5 }
+      },
+      "c": {
+        "label": "Du ber om ursäkt för tonen",
+        "effects": { "trust": 4, "weeds": -3 }
+      }
+    }
+  }
+]
