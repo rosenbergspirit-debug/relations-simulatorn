@@ -38,15 +38,22 @@ def apply_choice(state: GameState, effects: Dict[str, int]) -> GameState:
 
 
 def apply_repair(state: GameState) -> GameState:
-   
+    """
+    Repair v2:
+    - Ju mer ogräs, desto svårare att reparera
+    - Begränsat antal försök
+    """
     if state.repair_points >= MAX_REPAIR_POINTS:
         log_warning("Inga repair-points kvar")
         return state
 
+    difficulty = max(1, state.weeds // 20)
+
     log_info("Repair används")
-    state.weeds -= 5
-    state.trust += 3
+    state.weeds -= 5 // difficulty
+    state.trust += 4 // difficulty
     state.repair_points += 1
 
     state.clamp()
     return state
+
