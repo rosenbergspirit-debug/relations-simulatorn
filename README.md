@@ -12,3 +12,20 @@ Installation
 1. Klona repot:
 ```bash
 git clone https://github.com/rosenbergspirit-debug/relations-simulatorn.git
+
+
+---
+
+Project-struktur
+
+src/
+└── relations_simulator/
+    ├── engine.py        # Spelmotorn och klass
+    ├── main.py          # CLI
+    ├── __main__.py      # Python -m relations_simulator
+    ├── config.py        # Konfiguration och pathing (Pathlib)
+    ├── utils.py         # Logger och säker input-hantering
+    ├── module_io.py     # JSON-inläsning
+    ├── scenarios.json   # Spelets scenarier och val
+    └── tests/
+        └── test_engine.py  # Enhetstester för spelmotorn
