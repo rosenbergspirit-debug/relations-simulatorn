@@ -3,6 +3,7 @@ from .engine import GameState, apply_choice, apply_repair
 from .module_io import load_json
 from .utils import safe_input, log_info
 
+print("Relations Simulator startar...")
 
 def main():
     log_info("Relations Simulator startar")
@@ -27,3 +28,6 @@ def main():
         print(f"Tillit: {state.trust}, Stress: {state.stress}, Ogräs: {state.weeds}")
 
     print("\nSpelet är slut. Tack för att du spelade!")
+
+if __name__ == "__main__":
+    main()
