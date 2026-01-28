@@ -1,11 +1,10 @@
 from .config import DEFAULT_STATE, SCENARIO_FILE
-from .engine import GameState, apply_choice, apply_repair
+from .game.engine import GameState, apply_choice, apply_repair
 from .module_io import load_json
 from .utils import safe_input, log_info
 
-print("Relations Simulator startar...")
-
 def main():
+    print("Relations Simulator startar...")
     log_info("Relations Simulator startar")
 
     scenarios = load_json(SCENARIO_FILE)

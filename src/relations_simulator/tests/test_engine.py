@@ -1,6 +1,6 @@
 import unittest
 
-from relations_simulator.engine import GameState, apply_choice, apply_repair
+from relations_simulator.game.engine import GameState, apply_choice, apply_repair
 
 
 class TestEngine(unittest.TestCase):

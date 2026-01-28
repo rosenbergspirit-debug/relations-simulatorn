@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from typing import Dict
 
-from .config import MIN_VALUE, MAX_VALUE, MAX_REPAIR_POINTS
-from .utils import log_info, log_warning
+from ..config import MIN_VALUE, MAX_VALUE, MAX_REPAIR_POINTS
+from ..utils import log_info, log_warning
 
 
 @dataclass
