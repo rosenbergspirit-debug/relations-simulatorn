@@ -1,31 +1,22 @@
-Relations Simulator är tänkt att vara ett turbaserat textspel som simulerar relationsdynamik
-genom val och konsekvenser. 
+Relations Simulator
 
-Detta är bara en prototyp med förhoppning om att längre fram kunna skapa en simulering som faktiskt kan hjälpa par simulera hur olika val får olika konsekvenser. 
-
-I denna prototyp ställs man inför olika vardagliga konfliktscenarier där varje val påverkar relationens tillstånd över tid.
+Relations Simulator är ett turbaserat textspel som simulerar relationsdynamik genom val och konsekvenser.
+Detta är en prototyp där spelaren ställs inför vardagliga konfliktscenarier och varje val påverkar relationens
+tillit, stress och “ogräs” (olösta konflikter) över tid.
 
 ---
 
 Installation
-
-1. Klona repot:
 ```bash
 git clone https://github.com/rosenbergspirit-debug/relations-simulatorn.git
+cd relations-simulatorn
 
+python -m venv .venv
+source .venv/Scripts/activate
+pip install -e .
 
----
+Kör spelet
+python -m relations_simulator
 
-Project-struktur
-
-src/
-└── relations_simulator/
-    ├── engine.py        # Spelmotorn och klass
-    ├── main.py          # CLI
-    ├── __main__.py      # Python -m relations_simulator
-    ├── config.py        # Konfiguration och pathing (Pathlib)
-    ├── utils.py         # Logger och säker input-hantering
-    ├── module_io.py     # JSON-inläsning
-    ├── scenarios.json   # Spelets scenarier och val
-    └── tests/
-        └── test_engine.py  # Enhetstester för spelmotorn
+Kör tester
+python -m unittest discover src
